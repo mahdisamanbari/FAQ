@@ -5,12 +5,12 @@ const Question = ({info,title}) => {
 
     return (
         <section>
-           <div> 
+           <div className={!open ? "open":"closed"}> 
             <h4>{title}</h4>
             <button onClick={()=>setOpen(!open)}>{!open ? "-": "+"}</button>    
            </div>
            {
-            !open && <p>{info}</p>
+            !open && <p className={!open ? "open":"closed"}>{info}</p>
 
            } 
            
